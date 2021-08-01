@@ -5,4 +5,4 @@
 - Comandos `JOIN` e outros como `BETWEEN`, `ORDER BY`, `COUNT`, etc.
 
 ### Módulo 3
-- 
+- Funções com case e condições, triggers e procedures.
