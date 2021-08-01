@@ -8,12 +8,12 @@ DELIMITER $$
 -- Comando para indicar a criação da função, nome da função,
 -- parâmetros dentro dos parênteses
 CREATE PROCEDURE inserirAluno(NOME VARCHAR(50), IDADE INT,
-	ENDERECO VARCHAR(100))
+  ENDERECO VARCHAR(100))
 -- Comando indicando o começo da função
 BEGIN
-	-- O que a função fará
-	INSERT INTO TB_ALUNOS(NM_ALUNO, NR_IDADE, DS_ENDERECO)
-	VALUES (NOME, IDADE, ENDERECO);
+  -- O que a função fará
+  INSERT INTO TB_ALUNOS(NM_ALUNO, NR_IDADE, DS_ENDERECO)
+  VALUES (NOME, IDADE, ENDERECO);
 -- Comando indicando o fim da função
 END $$
 -- Indicando que o delimitador é o ponto e vírgula
@@ -24,9 +24,9 @@ CALL inserirAluno('Ana', 18, 'Rua dos bobos');
 
 DELIMITER $$
 CREATE PROCEDURE insertAndSelect(NOME VARCHAR(50), IDADE INT,
-	ENDERECO VARCHAR(100))
+  ENDERECO VARCHAR(100))
 BEGIN
-	-- O que a função fará
-	INSERT INTO TB_ALUNOS(NM_ALUNO, NR_IDADE, DS_ENDERECO)
-	VALUES (NOME, IDADE, ENDERECO);
-	SELECT * FROM TB
+  -- O que a função fará
+  INSERT INTO TB_ALUNOS(NM_ALUNO, NR_IDADE, DS_ENDERECO)
+  VALUES (NOME, IDADE, ENDERECO);
+  SELECT * FROM TB

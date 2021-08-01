@@ -5,33 +5,33 @@ USE Clinica;
 
 -- d) Criar a tabela médicos.
 CREATE TABLE tb_medicos(
-	cd_medico INT AUTO_INCREMENT,
-	nm_medico VARCHAR(100) NOT NULL,
-	PRIMARY KEY(cd_medico)
+  cd_medico INT AUTO_INCREMENT,
+  nm_medico VARCHAR(100) NOT NULL,
+  PRIMARY KEY(cd_medico)
 );
 
 -- c) Criar a tabela serviços.
 CREATE TABLE tb_servicos(
-	cd_servico INT AUTO_INCREMENT,
-	nm_servico VARCHAR(100) NOT NULL,
-	vl_servico DECIMAL(8, 2) NOT NULL,
-	id_medico INT,
-	PRIMARY KEY(cd_servico),
-	FOREIGN KEY (id_medico) REFERENCES tb_medicos(cd_medico)
+  cd_servico INT AUTO_INCREMENT,
+  nm_servico VARCHAR(100) NOT NULL,
+  vl_servico DECIMAL(8, 2) NOT NULL,
+  id_medico INT,
+  PRIMARY KEY(cd_servico),
+  FOREIGN KEY (id_medico) REFERENCES tb_medicos(cd_medico)
 );
 
 -- b) Criar a tabela clientes.
 CREATE TABLE tb_clientes(
-	cd_cliente INT AUTO_INCREMENT,
-	nm_cliente VARCHAR(100) NOT NULL,
-	snm_cliente VARCHAR(100) NOT NULL,
-	gen_cliente CHAR(1) NOT NULL,
-	end_cliente VARCHAR(100) NOT NULL,
-	cid_cliente VARCHAR(100) NOT NULL,
-	est_cliente CHAR(2) NOT NULL,
-	id_servico INT,
-	PRIMARY KEY(cd_cliente),
-	FOREIGN KEY (id_servico) REFERENCES tb_servicos(cd_servico)
+  cd_cliente INT AUTO_INCREMENT,
+  nm_cliente VARCHAR(100) NOT NULL,
+  snm_cliente VARCHAR(100) NOT NULL,
+  gen_cliente CHAR(1) NOT NULL,
+  end_cliente VARCHAR(100) NOT NULL,
+  cid_cliente VARCHAR(100) NOT NULL,
+  est_cliente CHAR(2) NOT NULL,
+  id_servico INT,
+  PRIMARY KEY(cd_cliente),
+  FOREIGN KEY (id_servico) REFERENCES tb_servicos(cd_servico)
 );
 
 -- g) Inserir os dados na tabela médicos.
